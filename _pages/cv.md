@@ -8,23 +8,25 @@ permalink: /cv/
 [Download my CV]({{ "/assets/CV.pdf" | relative_url }}) in PDF format.
 
 
-**Email:** [netID@cornell.edu](mailto:netID@cornell.edu) | | | **Phone:** +123 456 7890
+**Email:** [jep369@cornell.edu](mailto:jep369@cornell.edu) | | | **Phone:** 787 308 2202
 
 ---
 
 #### Objective
-Aspiring engineering student with a strong foundation in.... Passionate about ... and eager to apply my knowledge in real-world applications.
+Mechanical Engineering student with a strong interest in project management and technical problem-solving. I enjoy taking complex challenges and breaking them down into clear steps, coordinating resources, and driving projects to completion. 
+
+Skilled in balancing technical analysis with organizational strategy, I thrive in environments where engineering and leadership intersect. My goal is to continue building expertise as both an engineer and a project manager, delivering solutions that are efficient, innovative, and impactful.
 
 ---
 
 #### Education
 - **Cornell University**  
-  *Bachelor of Science in Mechanical and Aerospace Engineering*  
-  GPA: 3.8/4.0 | Graduation: Month, Year
+  *Bachelor of Science in Mechanical Engineering*  
+  GPA: 3.7/4.0 | Graduation: May, 2028
 
-- **[High School Name]**  
+- **Colegio Marista de Guaynabo**  
   *High School Diploma*  
-  Graduation: [Month, Year]
+  Graduation: [May,2024]
 
 ---
 
