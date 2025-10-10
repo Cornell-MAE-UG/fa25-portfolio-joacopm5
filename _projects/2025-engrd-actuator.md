@@ -28,7 +28,7 @@ $$
 W \approx 5.3\,\text{kN}, \qquad \frac{W}{F_{\text{act}}} \approx 1.2.
 $$
 
-To maximize mechanical advantage, we trade lift. In order to maximize MA and lift for bar length $L$ within the workspace, we set \alpha = 90^\circ$, allow more stroke, increase $L$ or use a beefier actuator.
+To maximize mechanical advantage, we trade lift. In order to maximize MA and lift for bar length $L$ within the workspace, we set $\alpha = 90^\circ$, allow more stroke, increase $L$ or use a beefier actuator.
 
 
 
