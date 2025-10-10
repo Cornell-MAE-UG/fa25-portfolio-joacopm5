@@ -1,6 +1,7 @@
 ---
 layout: project
 title: Maximizing Mechanical Advantage
+math: true
 description: Portfolio Assignment ENGRD 2020
 technologies: [LaTeX, AI to convert raw calculations into LaTeX format]
 image: /assets/images/actuator-sketch.jpg
