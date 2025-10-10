@@ -32,7 +32,7 @@ $$
 \Delta h \approx L\big(\sin\theta_2 - \sin\theta_1\big).
 $$
 
-(with $L=0.608\,\text{m}$, $\theta_1 \approx 29.5^\circ$, $\theta_2 \approx 80^\circ$): $\displaystyle \Delta h \approx 0.299\,\text{m}$.
+(with $L=0.608\,\text{m}$, $\theta_1 \approx 9.46^\circ$, $\theta_2 \approx 56^\circ$): $\displaystyle \Delta h \approx 0.41\,\text{m}$.
 
 With $F_{\text{act}} = 4.45\,\text{kN}$, $\alpha = 62^\circ$ (Law of Sines), $\theta = 57^\circ$, $r = 0.45\,\text{m}$, $L = 0.61\,\text{m}$:
 $$
