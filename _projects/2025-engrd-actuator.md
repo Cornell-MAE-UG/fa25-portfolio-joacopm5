@@ -6,8 +6,12 @@ description: Portfolio Assignment ENGRD 2020
 technologies: [LaTeX, AI to convert raw calculations into LaTeX format]
 image: /assets/images/actuator-sketch.jpg
 ---
+In HW4, we were tasked with creating a mechanism consisting of a rigid bar, an actuator, and a payload. Additionally, we were restricted to using only three pins, two of which had to be on the ground. Our objective was to maximize the lift height and load within a workspace of \(150~\text{cm} \times 50~\text{cm}\). The actuator I selected was the Tolomatic IMA33 with a BN05 lead. The peak thrust for this actuator is \(4.45~\text{kN}\) and I chose the stroke length to be \(380.8~\text{mm}\), which is within its stroke range of \(76.2~\text{mm}\) to \(457.2~\text{mm}\).
+
 
 The mechanism consists of a bar of $L = 0.608\,\text{m}$ and is driven by the actuator at a radius of $r = 0.45\,\text{m}$. The base of the actuator is pinned to the ground at $x = 85\,\text{cm}$ while the bar is pinned to the ground at $x = 45\,\text{cm}$.
+
+[Shaded rendering of earlier version]({{ "/assets/images/actuator-data.jpg" | relative_url }}){: .inline-image-r style="width: 350px"}
 
 If we have the pivot at $A$, the bar makes an angle $\theta$ from the horizontal, and tip load $W$ acts downward a distance $L$ from $A$. $F_{\text{act}}$ acts along its own line at point $J$ a distance $r$ from $A$ along the bar. Then, we can let $\alpha$ be the angle between the bar and the actuator force, or between $\vec{\mathbf{r}}_j$ and $\vec{\mathbf{F}}_{\text{act}}$.
 
