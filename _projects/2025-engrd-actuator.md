@@ -6,20 +6,23 @@ technologies: [Python]
 image: /assets/images/radio-machine-cad.jpg
 ---
 
-For a class, we were asked to CAD a complex object. This design was...Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut nec accumsan leo. Pellentesque ornare orci enim, vitae vestibulum nibh rutrum in. Donec pharetra risus nec ipsum fringilla, et mattis tortor auctor. Duis tortor ante, posuere ut odio a, scelerisque interdum purus. Aenean faucibus luctus est, sed bibendum tellus. 
+In HW4, we were tasked with creating a mechanism consisting of a rigid bar, an actuator, and a payload. Additionally, we were restricted to using only three pins, two of which had to be on the ground. Our objective was to maximize the lift height and load within a workspace of 150 cm x 50 cm. The actuator I selected was the Tolomatic IMA33 with a BN05 lead. The peak thrust for this actuator is 4.45 kN and I chose the stroke length to be 380.8 mm, which is within its stroke range of 76.2 mm to 457.2 mm.
 
-Nulla et magna urna. Morbi a ipsum sollicitudin, rhoncus risus volutpat, ultricies nunc. Quisque mollis finibus ante id imperdiet. Quisque vehicula elit sit amet felis facilisis fermentum.
+![Shaded rendering of earlier version]({{ "/assets/images/actuator-data.jpg" | relative_url }}){: .inline-image-r style="width: 200px"}
 
-![Shaded rendering of earlier version]({{ "/assets/images/radio-machine.jpg" | relative_url }}){: .inline-image-r style="width: 200px"}
+The mechanism consists of a bar of L = 0.608 m and is driven by the actuator at a radius of 0.45 m. The base of the actuator is pinned to the ground at x = 85 cm while the bar is pinned to the ground at x = 45 cm.
 
-Nulla et magna urna. Morbi a ipsum sollicitudin, rhoncus risus volutpat, ultricies nunc. Quisque mollis finibus ante id imperdiet. Quisque vehicula elit sit amet felis facilisis fermentum.
+If we have the pivot at A, the bar makes an angle θ from the horizontal, and tip load W acts downward a distance L from A. F~act~= acts along its own line at point J a distance r from A along the bar. Then, we can let α be the angle between the bar and the actuator force, or between $\mathbf{r}$~j~ and $\mathbf{F}$~act~.
 
-Aenean tincidunt aliquam arcu, in euismod dui dapibus eu. In placerat, mi et ultrices consequat, quam ligula cursus mauris, in semper neque nibh at est. Maecenas hendrerit dignissim porta. Phasellus nec fringilla dolor. Etiam efficitur nisi sit amet velit pharetra feugiat. Etiam ultrices turpis at leo semper, eleifend scelerisque neque malesuada. Aliquam molestie congue rhoncus. Donec blandit neque dolor, nec tristique mi pretium ac. Mauris tincidunt ullamcorper magna, nec pellentesque mi sagittis quis.
+If we take moments about A, we get that:
+   WLcos(θ) = F~act~rsin(α)
+    W = F~act~(r/L)(sin(α)/cos(θ)).
 
-I was inspired by this old radio when I made this rendering:
+And, the height change:
+    Δh ≈ L(sinθ~2~-sinθ~1~)
 
-![Photo of old radio]({{ "/assets/images/old-radio.jpg" | relative_url }}){: .inline-image-l}
+So, with F~act~ = 4.45 kN, α = 62 deg (using Law of Sines), θ = 57 deg, r = 0.45 m, L = 0.61 m:
+    W = 5.3 kN
+So, mechanical advantage W/F~act~ = 1.2
 
-Aenean tincidunt aliquam arcu, in euismod dui dapibus eu. In placerat, mi et ultrices consequat, quam ligula cursus mauris, in semper neque nibh at est. Maecenas hendrerit dignissim porta. Phasellus nec fringilla dolor. Etiam efficitur nisi sit amet velit pharetra feugiat. Etiam ultrices turpis at leo semper, eleifend scelerisque neque malesuada. Aliquam molestie congue rhoncus. Donec blandit neque dolor, nec tristique mi pretium ac. Mauris tincidunt ullamcorper magna, nec pellentesque mi sagittis quis.
-
-Aenean tincidunt aliquam arcu, in euismod dui dapibus eu. In placerat, mi et ultrices consequat, quam ligula cursus mauris, in semper neque nibh at est. Maecenas hendrerit dignissim porta. Phasellus nec fringilla dolor. Etiam efficitur nisi sit amet velit pharetra feugiat. Etiam ultrices turpis at leo semper, eleifend scelerisque neque malesuada. Aliquam molestie congue rhoncus. Donec blandit neque dolor, nec tristique mi pretium ac. Mauris tincidunt ullamcorper magna, nec pellentesque mi sagittis quis.
+In order to maximize the mechanical advantage, we have to forego lift. However, some things we could do are increase te bar length, allowing more stroke, or getting a bigger actuator.
