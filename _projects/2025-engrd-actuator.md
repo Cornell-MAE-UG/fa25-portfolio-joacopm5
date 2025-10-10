@@ -6,23 +6,44 @@ technologies: [LaTex]
 image: /assets/images/actuator-sketch.jpg
 ---
 
+\documentclass[11pt]{article}
+\usepackage{amsmath, amssymb}
+\usepackage{graphicx}
+\usepackage[margin=1in]{geometry}
+
+\begin{document}
+
 In HW4, we were tasked with creating a mechanism consisting of a rigid bar, an actuator, and a payload. Additionally, we were restricted to using only three pins, two of which had to be on the ground. Our objective was to maximize the lift height and load within a workspace of 150 cm x 50 cm. The actuator I selected was the Tolomatic IMA33 with a BN05 lead. The peak thrust for this actuator is 4.45 kN and I chose the stroke length to be 380.8 mm, which is within its stroke range of 76.2 mm to 457.2 mm.
 
-![Shaded rendering of earlier version]({{ "/assets/images/actuator-data.jpg" | relative_url }}){: .inline-image-r style="width: 200px"}
+\begin{figure}[h]
+  \centering
+  % Shaded rendering of earlier version
+  \includegraphics[width=350pt]{/assets/images/actuator-data.jpg}
+\end{figure}
 
-The mechanism consists of a bar of L = 0.608 m and is driven by the actuator at a radius of 0.45 m. The base of the actuator is pinned to the ground at x = 85 cm while the bar is pinned to the ground at x = 45 cm.
+The mechanism consists of a bar of \(L = 0.608\ \mathrm{m}\) and is driven by the actuator at a radius of \(0.45\ \mathrm{m}\). The base of the actuator is pinned to the ground at \(x = 85\ \mathrm{cm}\) while the bar is pinned to the ground at \(x = 45\ \mathrm{cm}\).
 
-If we have the pivot at A, the bar makes an angle θ from the horizontal, and tip load W acts downward a distance L from A. F~act~= acts along its own line at point J a distance r from A along the bar. Then, we can let α be the angle between the bar and the actuator force, or between $\mathbf{r}$~j~ and $\mathbf{F}$~act~.
+If we have the pivot at \(A\), the bar makes an angle \(\theta\) from the horizontal, and tip load \(W\) acts downward a distance \(L\) from \(A\). \(F_{\text{act}}\) acts along its own line at point \(J\) a distance \(r\) from \(A\) along the bar. Then, we can let \(\alpha\) be the angle between the bar and the actuator force, or between \(\mathbf{r}_j\) and \(\mathbf{F}_{\text{act}}\).
 
-If we take moments about A, we get that:
-   WLcos(θ) = F~act~rsin(α)
-    W = F~act~(r/L)(sin(α)/cos(θ)).
+If we take moments about \(A\), we get that:
+\[
+  W L \cos(\theta) = F_{\text{act}}\, r \sin(\alpha),
+\]
+\[
+  W = F_{\text{act}}\left(\frac{r}{L}\right)\left(\frac{\sin(\alpha)}{\cos(\theta)}\right).
+\]
 
 And, the height change:
-    Δh ≈ L(sinθ~2~-sinθ~1~)
+\[
+  \Delta h \approx L\left(\sin \theta_2 - \sin \theta_1\right).
+\]
 
-So, with F~act~ = 4.45 kN, α = 62 deg (using Law of Sines), θ = 57 deg, r = 0.45 m, L = 0.61 m:
-    W = 5.3 kN
-So, mechanical advantage W/F~act~ = 1.2
+So, with \(F_{\text{act}} = 4.45\ \mathrm{kN}\), \(\alpha = 62^\circ\) (using Law of Sines), \(\theta = 57^\circ\), \(r = 0.45\ \mathrm{m}\), \(L = 0.61\ \mathrm{m}\):
+\[
+  W = 5.3\ \mathrm{kN}.
+\]
+So, mechanical advantage \( \dfrac{W}{F_{\text{act}}} = 1.2\).
 
-In order to maximize the mechanical advantage, we have to forego lift. However, some things we could do are increase te bar length, allowing more stroke, or getting a bigger actuator.
+In order to maximize the mechanical advantage, we have to forego lift. However, some things we could do are increase the bar length, allowing more stroke, or getting a bigger actuator.
+
+\end{document}
