@@ -39,7 +39,7 @@ $$
 W \approx 5.3\,\text{kN}, \qquad \frac{W}{F_{\text{act}}} \approx 1.2.
 $$
 
-To maximize the **M.A.–to–lift ratio** (force gain per mm of vertical lift), place the actuator base so $\alpha$ is nearly perpendicular at the heaviest part of the lift, keep the bar’s rotation modest to use the stroke efficiently, and choose a large attach radius ($r/L \approx 0.7$–$0.8$). With the fixed $380.8\,\mathrm{mm}$ stroke, select $[\theta_1,\theta_2]$ to fully use the stroke while maximizing the minimum M.A.–to–lift ratio over that heavy-lift interval.
+To maximize the **M.A.–to–lift ratio** (force gain per mm of vertical lift), we place the actuator base so $\alpha$ is nearly perpendicular at the heaviest part of the lift, keep the bar’s rotation modest to use the stroke efficiently, and choose a large attach radius ($r/L \approx 0.7$–$0.8$). With the fixed $380.8\,\mathrm{mm}$ stroke, select $[\theta_1,\theta_2]$ to fully use the stroke while maximizing the minimum M.A.–to–lift ratio over that heavy-lift interval.
 
 
 
