@@ -16,6 +16,7 @@ The mechanism consists of a bar of $L = 0.608\,\text{m}$ and is driven by the ac
 If we have the pivot at $A$, the bar makes an angle $\theta$ from the horizontal, and tip load $W$ acts downward a distance $L$ from $A$. $F_{\text{act}}$ acts along its own line at point $J$ a distance $r$ from $A$ along the bar. Then, we can let $\alpha$ be the angle between the bar and the actuator force, i.e., between $\vec{\mathbf{r}}_{j}$ and $\vec{\mathbf{F}}_{\text{act}}$.
 
 
+
 **Moment about $A$:**
 $$
 W\,L\cos\theta \;=\; F_{\text{act}}\,r\sin\alpha
