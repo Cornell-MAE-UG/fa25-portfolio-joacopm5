@@ -2,8 +2,8 @@
 layout: project
 title: Maximizing Mechanical Advantage
 description: Portfolio Assignment ENGRD 2020
-technologies: [Python]
-image: /assets/images/radio-machine-cad.jpg
+technologies: [LaTex]
+image: /assets/images/actuator-sketch.jpg
 ---
 
 In HW4, we were tasked with creating a mechanism consisting of a rigid bar, an actuator, and a payload. Additionally, we were restricted to using only three pins, two of which had to be on the ground. Our objective was to maximize the lift height and load within a workspace of 150 cm x 50 cm. The actuator I selected was the Tolomatic IMA33 with a BN05 lead. The peak thrust for this actuator is 4.45 kN and I chose the stroke length to be 380.8 mm, which is within its stroke range of 76.2 mm to 457.2 mm.
