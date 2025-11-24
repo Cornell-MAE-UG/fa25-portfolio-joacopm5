@@ -270,7 +270,7 @@ $$
 
 Increasing $\Delta T_{\mathrm{lm}}$ via counterflow is effectively “free performance” compared to enlarging $A$.
 
-Matching the capacity rates $\dot{m}_H\, c_{p,H} \approx \dot{m}_C\, c_{p,C}$ on both sides (as suggested by our counterflow data) maximizes the effectiveness of the heat exchanger.
+Matching the capacity rates $\dot m_H c_{p,H} \approx \dot m_C c_{p,C}$ on both sides (as suggested by our counterflow data) maximizes the effectiveness of the heat exchanger.
 
 
 
