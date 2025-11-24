@@ -218,6 +218,7 @@ Qualitatively, the measurements confirm the textbook result:
 - **Parallel flow:** large driving force at the inlet, very small at the outlet.  
 - **Counterflow:** more even driving force, better use of the entire surface area, and the cold stream can exit at a temperature closer to the hot inlet.
 
+
 ### 4.2 Effect of Pump Flow Rate
 
 Comparing the parallel low-flow and parallel high-flow cases:
