@@ -272,6 +272,7 @@ Increasing $\Delta T_{\mathrm{lm}}$ via counterflow is effectively “free perfo
 
 Matching the capacity rates $\dot{m}_H c_{p,H} \approx \dot{m}_C c_{p,C}$ on both sides (as our counterflow data roughly show) maximizes the effectiveness of the exchanger.
 
+
 In practice, I would recommend:
 
 1. **Counterflow arrangement**, to maximize the log-mean temperature difference and minimize entropy generation.
