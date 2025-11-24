@@ -164,87 +164,87 @@ between the two streams is more uniform (as in counterflow).
 
 The two main “knobs” I considered are:
 
-1. **Flow arrangement: parallel vs. counterflow**
-2. **Pump flow rate (low vs. high)**
+- Flow arrangement: parallel vs. counterflow  
+- Pump flow rate (low vs. high)
 
 ### 4.1 Parallel vs. Counterflow – Temperature Driving Force
 
-A key performance metric for a heat exchanger is the **log-mean temperature difference (LMTD)**, which measures the effective driving force for heat transfer:
+A key performance metric for a heat exchanger is the log-mean temperature difference (LMTD), which measures the effective driving force for heat transfer.
 
-- For **parallel flow**:
+For **parallel flow**:
 
-\[
-\Delta T_1 = T_{H,\text{in}} - T_{C,\text{in}},
-\qquad
-\Delta T_2 = T_{H,\text{out}} - T_{C,\text{out}},
-\]
-\[
+$$
+\Delta T_1 = T_{H,in} - T_{C,in}, \qquad
+\Delta T_2 = T_{H,out} - T_{C,out},
+$$
+
+$$
 \Delta T_{\text{lm,parallel}} =
 \frac{\Delta T_1 - \Delta T_2}
-     {\ln\left(\dfrac{\Delta T_1}{\Delta T_2}\right)}.
-\]
+     {\ln\!\left(\dfrac{\Delta T_1}{\Delta T_2}\right)}.
+$$
 
-- For **counterflow**:
+For **counterflow**:
 
-\[
-\Delta T_1 = T_{H,\text{in}} - T_{C,\text{out}},
-\qquad
-\Delta T_2 = T_{H,\text{out}} - T_{C,\text{in}},
-\]
-\[
+$$
+\Delta T_1 = T_{H,in} - T_{C,out}, \qquad
+\Delta T_2 = T_{H,out} - T_{C,in},
+$$
+
+$$
 \Delta T_{\text{lm,counter}} =
 \frac{\Delta T_1 - \Delta T_2}
-     {\ln\left(\dfrac{\Delta T_1}{\Delta T_2}\right)}.
-\]
+     {\ln\!\left(\dfrac{\Delta T_1}{\Delta T_2}\right)}.
+$$
 
-Using the **high-flow parallel** and **counterflow** data:
+Using the high-flow parallel and counterflow data:
 
 - Parallel (high flow):
-  \[
-  \Delta T_1 \approx 35.5 - 10.0 = 25.5^\circ\text{C},
-  \quad
-  \Delta T_2 \approx 24.7 - 22.3 = 2.4^\circ\text{C}.
-  \]
-- Counterflow:
-  \[
-  \Delta T_1 \approx 35.5 - 24.6 = 10.9^\circ\text{C},
-  \quad
-  \Delta T_2 \approx 21.3 - 11.0 = 10.3^\circ\text{C}.
-  \]
+  $$
+  \Delta T_1 \approx 35.5 - 10.0 = 25.5^\circ\mathrm{C}, \qquad
+  \Delta T_2 \approx 24.7 - 22.3 = 2.4^\circ\mathrm{C}.
+  $$
 
-The parallel case has one large and one very small temperature difference,
-so the LMTD is limited by the tiny outlet approach. In contrast, the counterflow
-case keeps the temperature difference **more uniform** along the length of the exchanger, resulting in a larger effective LMTD and therefore, for the same
-area and overall heat-transfer coefficient, a higher heat rate $\dot Q$.
+- Counterflow:
+  $$
+  \Delta T_1 \approx 35.5 - 24.6 = 10.9^\circ\mathrm{C}, \qquad
+  \Delta T_2 \approx 21.3 - 11.0 = 10.3^\circ\mathrm{C}.
+  $$
+
+The parallel case has one large and one very small temperature difference, so the LMTD is limited by the tiny outlet approach. In contrast, the counterflow case keeps the temperature difference more uniform along the length of the exchanger, resulting in a larger effective LMTD and therefore, for the same area and overall heat-transfer coefficient, a higher heat rate $\dot{Q}$.
 
 Qualitatively, the measurements confirm the textbook result:
 
-- **Parallel flow:** large driving force at the inlet, very small at the outlet.
+- **Parallel flow:** large driving force at the inlet, very small at the outlet.  
 - **Counterflow:** more even driving force, better use of the entire surface area, and the cold stream can exit at a temperature closer to the hot inlet.
 
 ### 4.2 Effect of Pump Flow Rate
 
-Comparing the **parallel low-flow** and **parallel high-flow** cases:
+Comparing the parallel low-flow and parallel high-flow cases:
 
-- At **lower flow rate**, each fluid experiences a larger temperature change
-  (more residence time in the exchanger).  
-- At **higher flow rate**, the temperature changes per pass are smaller, but the
-  **mass flow rate** and thus the total heat rate
-  \[
-  \dot Q = \dot m c_p \Delta T
-  \]
-  can still increase because $\dot m$ increases even as $\Delta T$ shrinks.
+- At **lower flow rate**, each fluid experiences a larger temperature change (more residence time in the exchanger).  
+- At **higher flow rate**, the temperature changes per pass are smaller, but the mass flow rate and thus the total heat rate
+  $$
+  \dot{Q} = \dot{m}\,c_p\,\Delta T
+  $$
+  can still increase because $\dot{m}$ increases even as $\Delta T$ shrinks.
 
 From the data:
 
-- Low-flow parallel:  
-  $\Delta T_H \approx 12.7^\circ\text{C}$, $\Delta T_C \approx 15.0^\circ\text{C}$.
-- High-flow parallel:  
-  $\Delta T_H \approx 10.8^\circ\text{C}$, $\Delta T_C \approx 12.3^\circ\text{C}$.
+- Low-flow parallel:
+  $$
+  \Delta T_H \approx 35.0 - 22.3 = 12.7^\circ\mathrm{C}, \qquad
+  \Delta T_C \approx 26.3 - 11.3 = 15.0^\circ\mathrm{C}.
+  $$
 
-The temperature changes get smaller, but if $\dot m$ increases enough, the
-overall heating and cooling capacity of the exchanger goes up. The tradeoff is
-the **pump power** required to deliver that higher flow rate.
+- High-flow parallel:
+  $$
+  \Delta T_H \approx 35.5 - 24.7 = 10.8^\circ\mathrm{C}, \qquad
+  \Delta T_C \approx 22.3 - 10.0 = 12.3^\circ\mathrm{C}.
+  $$
+
+The temperature changes get smaller, but if $\dot{m}$ increases enough, the overall heating and cooling capacity of the exchanger goes up. The tradeoff is the extra pump power required to deliver that higher flow rate.
+
 
 ---
 
