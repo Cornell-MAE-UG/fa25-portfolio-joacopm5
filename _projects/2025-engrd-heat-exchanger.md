@@ -6,7 +6,7 @@ description: Portfolio Assignment ENGRD 2210
 technologies: [LaTeX, AI to convert raw calculations into LaTeX format]
 image: /assets/images/heatexchanger.png
 ---
-In Homework 11 for ENGRD 2210, we were asked to select a real device from the course and analyze how its performance changes under different operating conditions.:contentReference[oaicite:0]{index=0} I chose a liquid–liquid heat exchanger, similar to the one used in our lab section, and focused on how **flow arrangement** (parallel vs. counterflow) and **pump flow rate** affect heat transfer and outlet temperatures.
+In Homework 11 for ENGRD 2210, we were asked to select a real device from the course and analyze how its performance changes under different operating conditions. I chose a liquid–liquid heat exchanger, similar to the one used in our lab section, and focused on how **flow arrangement** (parallel vs. counterflow) and **pump flow rate** affect heat transfer and outlet temperatures.
 
 The working fluids are water streams on both sides, so I take a constant specific heat
 $c_p \approx 4.18\,\text{kJ/(kg·K)}$ for both the hot and cold sides.
