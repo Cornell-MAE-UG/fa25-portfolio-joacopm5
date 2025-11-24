@@ -262,12 +262,16 @@ With the measured counterflow case:
 
 From a design standpoint:
 
-- For a **fixed heat-transfer area $A$ and overall coefficient $U$**, the heat rate is
-  \[
-  \dot Q = U A \,\Delta T_{\text{lm}}.
-  \]
-  Increasing $\Delta T_{\text{lm}}$ via counterflow is effectively “free performance” compared to enlarging $A$.
-- Matching the **capacity rates** $\dot m c_p$ on both sides (as our counterflow data roughly show) maximizes the effectiveness of the exchanger.
+For a fixed heat-transfer area \(A\) and overall heat-transfer coefficient \(U\), the heat rate is
+
+$$
+\dot{Q} = U\,A\,\Delta T_{\mathrm{lm}}.
+$$
+
+Increasing \(\Delta T_{\mathrm{lm}}\) via counterflow is effectively “free performance” compared to enlarging \(A\).
+
+Matching the capacity rates \(\dot{m}_H c_{p,H} \approx \dot{m}_C c_{p,C}\) on both sides (as our counterflow data roughly show) maximizes the effectiveness of the exchanger.
+
 
 In practice, I would recommend:
 
