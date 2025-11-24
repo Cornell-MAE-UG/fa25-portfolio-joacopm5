@@ -93,11 +93,13 @@ Conceptually, the diagram has:
 
 For each side, at steady state with a single inlet and outlet,
 
-\[
-\dot m_{H,\text{in}} = \dot m_{H,\text{out}} = \dot m_H,
-\qquad
-\dot m_{C,\text{in}} = \dot m_{C,\text{out}} = \dot m_C.
-\]
+$$
+\dot{m}_{H,in} = \dot{m}_{H,out} = \dot{m}_H,
+$$
+
+$$
+\dot{m}_{C,in} = \dot{m}_{C,out} = \dot{m}_C.
+$$
 
 There is no mass exchange between the two circuits.
 
@@ -105,82 +107,58 @@ There is no mass exchange between the two circuits.
 
 Neglecting kinetic and potential energy changes, and taking the control volume as just the exchanger shell and tubes,
 
-\[
-\dot Q + \dot m_H h_{H,\text{in}} 
-      + \dot m_C h_{C,\text{in}}
-      = \dot m_H h_{H,\text{out}} 
-      + \dot m_C h_{C,\text{out}}.
-\]
+$$
+\dot{Q} + \dot{m}_H h_{H,in} + \dot{m}_C h_{C,in}
+= \dot{m}_H h_{H,out} + \dot{m}_C h_{C,out}.
+$$
 
-For nearly incompressible liquids with constant $c_p$, we approximate
+For nearly incompressible liquids with constant specific heat \(c_p\),
 
-\[
+$$
 h \approx c_p T,
-\]
+$$
 
-which gives
-
-\[
-\dot Q = \dot m_C c_p\left(T_{C,\text{out}} - T_{C,\text{in}}\right)
-\]
-\[
-\dot Q = \dot m_H c_p\left(T_{H,\text{in}} - T_{H,\text{out}}\right).
-\]
-
-From the temperature data we can compare the **temperature rises and drops** to infer the ratio of flow rates:
-
-\[
-\frac{\dot m_C}{\dot m_H} 
-\approx 
-\frac{T_{H,\text{in}} - T_{H,\text{out}}}
-     {T_{C,\text{out}} - T_{C,\text{in}}}.
-\]
-
-For example, in the **parallel, low-flow** case,
-
-\[
-\Delta T_H = 35.0 - 22.3 \approx 12.7^\circ\text{C},\qquad
-\Delta T_C = 26.3 - 11.3 \approx 15.0^\circ\text{C},
-\]
 so
-\[
-\frac{\dot m_C}{\dot m_H} \approx \frac{12.7}{15.0} \approx 0.85.
-\]
 
-In the **counterflow** case,
+$$
+\dot{Q} = \dot{m}_C c_p \left( T_{C,out} - T_{C,in} \right),
+$$
 
-\[
-\Delta T_H = 35.5 - 21.3 \approx 14.2^\circ\text{C},\qquad
-\Delta T_C = 24.6 - 11.0 \approx 13.6^\circ\text{C},
-\]
-so
-\[
-\frac{\dot m_C}{\dot m_H} \approx \frac{14.2}{13.6} \approx 1.04,
-\]
-indicating almost equal capacity rates on both sides.
+$$
+\dot{Q} = \dot{m}_H c_p \left( T_{H,in} - T_{H,out} \right).
+$$
+
+From the temperature data we can compare the temperature rises and drops to infer the ratio of flow rates:
+
+$$
+\frac{\dot{m}_C}{\dot{m}_H}
+\approx
+\frac{T_{H,in} - T_{H,out}}{T_{C,out} - T_{C,in}}.
+$$
 
 ### 3.3 Entropy Balance and Irreversibility
 
-Treating the environment at a uniform temperature $T_0$, the entropy balance
+Treating the environment at a uniform temperature \(T_0\), the entropy balance
 for the exchanger is
 
-\[
-\dot S_{\text{gen}} =
-\dot m_H (s_{H,\text{out}} - s_{H,\text{in}})
-+ \dot m_C (s_{C,\text{out}} - s_{C,\text{in}})
-- \frac{\dot Q}{T_0}.
-\]
+$$
+\dot{S}_{gen} =
+\dot{m}_H (s_{H,out} - s_{H,in})
++ \dot{m}_C (s_{C,out} - s_{C,in})
+- \frac{\dot{Q}}{T_0}.
+$$
 
-With constant $c_p$ and small pressure changes we can approximate
+With constant \(c_p\) and small pressure changes we can approximate
 
-\[
-s_{\text{out}} - s_{\text{in}} \approx c_p \ln\left(\frac{T_{\text{out}}}{T_{\text{in}}}\right),
-\]
+$$
+s_{out} - s_{in} \approx c_p \ln\!\left(\frac{T_{out}}{T_{in}}\right),
+$$
 
-and we would find $\dot S_{\text{gen}} > 0$ in every case, consistent with the
-Second Law. The entropy generation is lower when the temperature difference between the two streams is more uniform (as in counterflow).
+and we would find \(\dot{S}_{gen} > 0\) in every case, consistent with the
+Second Law. The entropy generation is lower when the temperature difference
+between the two streams is more uniform (as in counterflow).
 
----
+--
 
 ## 4. Effect of Design and Operating Changes
 
