@@ -262,10 +262,10 @@ With the measured counterflow case:
 
 From a design standpoint:
 
-For a fixed heat-transfer area \(A\) and overall heat-transfer coefficient \(U\), the heat rate is
+For a fixed heat-transfer area \(A\) and overall heat-transfer coefficient \(h\), the heat rate is
 
 $$
-\dot{Q} = U\,A\,\Delta T_{\mathrm{lm}}.
+\dot{Q} = h\,A\,\Delta T_{\mathrm{lm}}.
 $$
 
 Increasing $\Delta T_{\mathrm{lm}}$ via counterflow is effectively “free performance” compared to enlarging $A$.
