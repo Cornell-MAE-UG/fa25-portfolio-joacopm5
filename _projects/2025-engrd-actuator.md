@@ -41,6 +41,124 @@ $$
 
 To maximize the **M.A.–to–lift ratio** (force gain per mm of vertical lift), we have to place the actuator base so that $\alpha$ is almost perpendicular when the actuator has to raise the largest load. We also want to reduce rotation to maximize how much stroke we use. Finally, we want a large radius of attachment ($r/L \approx 0.7$–$0.8$). With the fixed $380.8\,\mathrm{mm}$ stroke, we choose $[\theta_1,\theta_2]$ to use the stroke while maximizing the minimum M.A.–to–lift ratio over that period of largest effective load.
 
+Now, we no longer consider the bar to be rigid, so we will used Euler-Bernoulli beam theory to analyze how this changes the problem.
+
+We focus on the worst case configuration, which is what we used to maximize the mechanical advantage when the beam was rigid:
+
+\[
+\theta \approx 57^\circ, 
+\qquad 
+\alpha \approx 62^\circ,
+\qquad
+W \approx 5.3\,\text{kN}, 
+\qquad
+F_{\mathrm{act}} = 4.45\,\text{kN}.
+\]
+
+We also need a few assumptions for our analysis to work:
+
+\subsection*{Assumptions}
+\begin{itemize}
+    \item Small deflections (Euler--Bernoulli linear theory).
+    \item Constant $E$ and $I$ along the beam.
+    \item Only the force components perpendicular to the beam induce bending.
+    \item Conservative modeling: the bar is treated as a cantilever fixed at $A$ and free at $x=L$.
+\end{itemize}
+
+\subsection*{(a) Maximum Deflection of the Beam}
+
+The transverse components of the forces are:
+\[
+W_\perp = W\cos\theta,
+\qquad
+F_\perp = F_{\mathrm{act}}\sin\alpha.
+\]
+Numerically, this is:
+\[
+W_\perp \approx 2.89\times 10^3\,\text{N},
+\qquad
+F_\perp \approx 3.93\times 10^3\,\text{N}.
+\]
+
+Using the cantilever formulas for a point load at the tip and a point load at a location on the interipr, we find the deflection of the tip to be:
+\[
+\delta_{\max}
+= \frac{W_\perp L^3}{3EI}
++ \frac{F_\perp r^2(3L - r)}{6EI}.
+\]
+Substituting $L = 0.608\,\text{m}$ and $r = 0.45\,\text{m}$,
+\[
+\delta_{\max} 
+= \frac{398.5}{EI}.
+\]
+
+The design constraint of the second part of the assignment is that the vertical deflection remain below $2\%$ of the beam length:
+\[
+\delta_{\max} \le 0.02L = 0.0122\,\text{m}.
+\]
+So,
+\[
+EI \ge \frac{398.5}{0.0122}
+\approx 3.28\times 10^4\,\text{N}\cdot\text{m}^2.
+\]
+
+\subsection*{(b) Mass-Efficient Beam Design}
+
+We will compare aluminum and steel:
+
+\[
+I_{\min,\mathrm{Al}} = \frac{3.28\times 10^4}{70\times 10^9}
+\approx 4.7\times 10^{-7}\,\text{m}^4,
+\qquad
+I_{\min,\mathrm{st}} = \frac{3.28\times 10^4}{200\times 10^9}
+\approx 1.64\times 10^{-7}\,\text{m}^4.
+\]
+
+A rectangular hollow tube provides a high $I/A$ ratio.  
+For a rectangular tube of outer dimensions $b \times h$ and wall thickness $t$:
+\[
+I = \frac{1}{12}\Big( b h^3 - (b-2t)(h-2t)^3 \Big),
+\qquad
+A = bh - (b-2t)(h-2t).
+\]
+
+A mass-efficient aluminum section satisfying $I \ge I_{\min,\mathrm{Al}}$ is:
+\[
+h = 100\,\text{mm}, \qquad b = 20\,\text{mm}, \qquad t = 2\,\text{mm}.
+\]
+For ths config,
+\[
+I \approx 4.87\times 10^{-7}\,\text{m}^4,
+\qquad
+A \approx 4.64\times 10^{-4}\,\text{m}^2.
+\]
+
+Mass:
+\[
+m_{\mathrm{Al}} 
+= \rho_{\mathrm{Al}} A L
+= 2700 \times 4.64\times 10^{-4} \times 0.608
+\approx 0.76\,\text{kg}.
+\]
+
+Deflection:
+\[
+\delta_{\max,\mathrm{Al}} 
+= \frac{398.5}{E_{\mathrm{Al}} I}
+\approx 0.0117\,\text{m}
+\approx 1.9\% L,
+\]
+which satisfies the requirement.
+
+\[
+\boxed{
+\text{Final beam selection:  
+Rectangular aluminum tube } (100\,\text{mm} \times 20\,\text{mm} \times 2\,\text{mm}),\;
+L = 608\,\text{mm}.
+}
+\]
+
+\subsection*{(c) Final Beam Sketch}
 
 
 
