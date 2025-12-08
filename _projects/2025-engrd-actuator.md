@@ -161,4 +161,4 @@ $$
 
 A schematic of the final beam cross-section and its placement within the mechanism is shown in the figure below.
 
-![Final beam design sketch]({{ "/assets/images/beam-design.png" | relative_url }}){: .inline-image-r style="width: 350px"}
+![Final beam design sketch]({{ "/assets/images/beam-design.jpg" | relative_url }}){: .inline-image-r style="width: 350px"}
