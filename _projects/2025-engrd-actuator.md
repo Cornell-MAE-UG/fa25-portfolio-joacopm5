@@ -44,566 +44,121 @@ To maximize the **M.A.–to–lift ratio** (force gain per mm of vertical lift),
 Now, we no longer consider the bar to be rigid, so we use Euler–Bernoulli beam theory to analyze how this changes the problem.
 
 We focus on the worst-case configuration used to maximize mechanical advantage when the beam was rigid:
+$$
+\theta \approx 57^\circ, 
+\qquad
+\alpha \approx 62^\circ,
+\qquad
+W \approx 5.3\,\text{kN},
+\qquad
+F_{\mathrm{act}} = 4.45\,\text{kN}.
+$$
 
-𝜃
-≈
-57
-∘
-,
-𝛼
-≈
-62
-∘
-,
-𝑊
-≈
-5.3
- 
-kN
-,
-𝐹
-a
-c
-t
-=
-4.45
- 
-kN
-.
-θ≈57
-∘
-,α≈62
-∘
-,W≈5.3kN,F
-act
-	​
+To apply Euler–Bernoulli beam theory, we assume that deflections are small, the flexural rigidity $EI$ is constant along the span of the bar, and only the components of $W$ and $F_{\mathrm{act}}$ perpendicular to the beam contribute to bending. For a conservative estimate of the deflection, we model the bar as a cantilever fixed at $A$ and free at its tip.
 
-=4.45kN.
-
-We also need a few assumptions for our analysis to apply.
-
-Assumptions
-
-Small deflections (Euler–Bernoulli linear theory).
-
-Constant 
-𝐸
-E and 
-𝐼
-I along the beam.
-
-Only the force components perpendicular to the beam induce bending.
-
-Conservative modeling: the bar behaves as a cantilever fixed at 
-𝐴
-A and free at 
-𝑥
-=
-𝐿
-x=L.
-
-(a) Maximum Deflection of the Beam
-
-The transverse force components are
-
-𝑊
-⊥
-=
-𝑊
-cos
-⁡
-𝜃
-,
-𝐹
-⊥
-=
-𝐹
-a
-c
-t
-sin
-⁡
-𝛼
-.
-W
-⊥
-	​
-
-=Wcosθ,F
-⊥
-	​
-
-=F
-act
-	​
-
-sinα.
+The perpendicular components of the loads are therefore
+$$
+W_\perp = W\cos\theta,
+\qquad
+F_\perp = F_{\mathrm{act}}\sin\alpha.
+$$
 
 Numerically,
+$$
+W_\perp \approx 2.89\times 10^3\,\text{N},
+\qquad
+F_\perp \approx 3.93\times 10^3\,\text{N}.
+$$
 
-𝑊
-⊥
-≈
-2.89
-×
-10
-3
- N
-,
-𝐹
-⊥
-≈
-3.93
-×
-10
-3
- N
-.
-W
-⊥
-	​
-
-≈2.89×10
-3
- N,F
-⊥
-	​
-
-≈3.93×10
-3
- N.
-
-Modeling the beam as a cantilever with a tip load and a point load at 
-𝑟
-r, the maximum deflection is
-
-𝛿
-max
-⁡
+Using the cantilever beam formulas for (1) a point load $W_\perp$ at the free end and (2) a point load $F_\perp$ applied at a distance $r$ from the fixed end, the maximum tip deflection is
+$$
+\delta_{\max}
 =
-𝑊
-⊥
-𝐿
-3
-3
-𝐸
-𝐼
+\frac{W_\perp L^3}{3EI}
 +
-𝐹
-⊥
-𝑟
-2
-(
-3
-𝐿
-−
-𝑟
-)
-6
-𝐸
-𝐼
-.
-δ
-max
-	​
+\frac{F_\perp\,r^2(3L - r)}{6EI}.
+$$
 
+Substituting $L = 0.608\,\text{m}$ and $r = 0.45\,\text{m}$ gives
+$$
+\delta_{\max} = \frac{398.5}{EI}.
+$$
+
+The project requirement is that the beam’s vertical deflection must remain below $2\%$ of its length:
+$$
+\delta_{\max} \le 0.02L = 0.0122\,\text{m}.
+$$
+
+Therefore, the beam must satisfy
+$$
+EI \ge \frac{398.5}{0.0122}
+\approx 3.28\times 10^4\,\text{N}\cdot\text{m}^2.
+$$
+
+To design the lightest possible beam, we compare aluminum and steel. The minimum required second moment of area for each is
+$$
+I_{\min,\mathrm{Al}}
 =
-3EI
-W
-⊥
-	​
-
-L
-3
-	​
-
-+
-6EI
-F
-⊥
-	​
-
-r
-2
-(3L−r)
-	​
-
-.
-
-Substituting 
-𝐿
+\frac{3.28\times 10^4}{70\times 10^9}
+\approx 4.7\times 10^{-7}\,\text{m}^4,
+\qquad
+I_{\min,\mathrm{st}}
 =
-0.608
- 
-m
-L=0.608m and 
-𝑟
-=
-0.45
- 
-m
-r=0.45m,
+\frac{3.28\times 10^4}{200\times 10^9}
+\approx 1.64\times 10^{-7}\,\text{m}^4.
+$$
 
-𝛿
-max
-⁡
-=
-398.5
-𝐸
-𝐼
-.
-δ
-max
-	​
+A rectangular hollow tube is a good candidate because it achieves high stiffness for low mass. For a tube with outer dimensions $b \times h$ and wall thickness $t$,
+$$
+I = \frac{1}{12}\big(bh^3 - (b - 2t)(h - 2t)^3\big),
+\qquad
+A = bh - (b - 2t)(h - 2t).
+$$
 
-=
-EI
-398.5
-	​
-
-.
-
-The design constraint requires
-
-𝛿
-max
-⁡
-≤
-0.02
-𝐿
-=
-0.0122
- m
-.
-δ
-max
-	​
-
-≤0.02L=0.0122 m.
-
-Thus,
-
-𝐸
-𝐼
-≥
-398.5
-0.0122
-≈
-3.28
-×
-10
-4
- N
-⋅
-m
-2
-.
-EI≥
-0.0122
-398.5
-	​
-
-≈3.28×10
-4
- N⋅m
-2
-.
-(b) Mass-Efficient Beam Design
-
-The minimum required second moment of area for each material is
-
-𝐼
-min
-⁡
-,
-A
-l
-=
-3.28
-×
-10
-4
-70
-×
-10
-9
-≈
-4.7
-×
-10
-−
-7
- 
-m
-4
-,
-I
-min,Al
-	​
-
-=
-70×10
-9
-3.28×10
-4
-	​
-
-≈4.7×10
-−7
- m
-4
-,
-𝐼
-min
-⁡
-,
-s
-t
-=
-3.28
-×
-10
-4
-200
-×
-10
-9
-≈
-1.64
-×
-10
-−
-7
- 
-m
-4
-.
-I
-min,st
-	​
-
-=
-200×10
-9
-3.28×10
-4
-	​
-
-≈1.64×10
-−7
- m
-4
-.
-
-For a rectangular hollow tube with outer dimensions 
-𝑏
-×
-ℎ
-b×h and thickness 
-𝑡
-t,
-
-𝐼
-=
-1
-12
-(
-𝑏
-ℎ
-3
-−
-(
-𝑏
-−
-2
-𝑡
-)
-(
-ℎ
-−
-2
-𝑡
-)
-3
-)
-,
-𝐴
-=
-𝑏
-ℎ
-−
-(
-𝑏
-−
-2
-𝑡
-)
-(
-ℎ
-−
-2
-𝑡
-)
-.
-I=
-12
-1
-	​
-
-(bh
-3
-−(b−2t)(h−2t)
-3
-),A=bh−(b−2t)(h−2t).
-
-A mass-efficient aluminum section meeting the stiffness requirement is:
-
-ℎ
-=
-100
- mm
-,
-𝑏
-=
-20
- mm
-,
-𝑡
-=
-2
- mm
-.
-h=100 mm,b=20 mm,t=2 mm.
+A mass-efficient aluminum choice that meets the stiffness requirement is
+$$
+h = 100\,\text{mm},
+\qquad
+b = 20\,\text{mm},
+\qquad
+t = 2\,\text{mm}.
+$$
 
 For this cross-section,
+$$
+I \approx 4.87\times 10^{-7}\,\text{m}^4,
+\qquad
+A \approx 4.64\times 10^{-4}\,\text{m}^2.
+$$
 
-𝐼
-≈
-4.87
-×
-10
-−
-7
- 
-m
-4
-,
-𝐴
-≈
-4.64
-×
-10
-−
-4
- 
-m
-2
-.
-I≈4.87×10
-−7
- m
-4
-,A≈4.64×10
-−4
- m
-2
-.
-
-The mass is
-
-𝑚
-A
-l
+The mass of the beam is
+$$
+m_{\mathrm{Al}}
 =
-𝜌
-A
-l
- 
-𝐴
- 
-𝐿
+\rho_{\mathrm{Al}} A L
 =
-2700
-×
-4.64
-×
-10
-−
-4
-×
-0.608
-≈
-0.76
- kg
-.
-m
-Al
-	​
+2700 \times 4.64\times 10^{-4} \times 0.608
+\approx 0.76\,\text{kg}.
+$$
 
-=ρ
-Al
-	​
-
-AL=2700×4.64×10
-−4
-×0.608≈0.76 kg.
-
-The resulting deflection is
-
-𝛿
-max
-⁡
-,
-A
-l
+The expected maximum deflection is then
+$$
+\delta_{\max,\mathrm{Al}}
 =
-398.5
-𝐸
-A
-l
-𝐼
-≈
-0.0117
- m
-≈
-1.9
-%
- 
-𝐿
-,
-δ
-max,Al
-	​
+\frac{398.5}{E_{\mathrm{Al}} I}
+\approx 0.0117\,\text{m}
+\approx 1.9\%\,L,
+$$
+which satisfies the $2\%$ limit.
 
-=
-E
-Al
-	​
+$$
+\boxed{
+\text{Final beam selection: Rectangular aluminum tube } 
+(100\,\text{mm} \times 20\,\text{mm} \times 2\,\text{mm}),\quad
+L = 608\,\text{mm}.
+}
+$$
 
-I
-398.5
-	​
+A schematic of the final beam cross-section and its placement within the mechanism is shown in the figure below.
 
-≈0.0117 m≈1.9%L,
-
-which satisfies the 2% limit.
-
-Final beam selection: Rectangular aluminum tube 
-(
-100
- mm
-×
-20
- mm
-×
-2
- mm
-)
-,
-𝐿
-=
-608
- mm
-.
-Final beam selection: Rectangular aluminum tube (100 mm×20 mm×2 mm),L=608 mm.
-	​
+![Final beam design sketch]({{ "/assets/images/beam-design.png" | relative_url }}){: .inline-image-r style="width: 350px"}
