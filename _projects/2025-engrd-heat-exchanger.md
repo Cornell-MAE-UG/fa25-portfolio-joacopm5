@@ -3,7 +3,8 @@ layout: project
 title: Parallel vs. Counterflow Heat Exchanger Analysis
 math: true
 description: Portfolio Assignment ENGRD 2210
-technologies: [LaTeX, AI to convert raw calculations into LaTeX format]
+technologies: [LaTeX, AI to convert raw calculations into LaTeX format
+https://www.engineeringtoolbox.com/arithmetic-logarithmic-mean-temperature-d_436.html, https://innovationspace.ansys.com/courses/wp-content/uploads/sites/5/2021/02/LT4C3-Lesson4-Handout-NT.pdf]
 image: /assets/images/heatexchanger.png
 ---
 In Homework 11 for ENGRD 2210, we were asked to select a real device from the course and analyze how its performance changes under different operating conditions. I chose a liquid–liquid heat exchanger, similar to the one used in our lab section, and focused on how **flow arrangement** (parallel vs. counterflow) and **pump flow rate** affect heat transfer and outlet temperatures.
