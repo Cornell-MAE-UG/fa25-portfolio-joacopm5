@@ -12,8 +12,9 @@ title                    : Joaquin Perez Portfolio
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : Joaquin Perez
-description              : Joaquin Perez - Projects and CV 
-baseurl                  : fa25-portfolio-joacopm5 # Set this to your repo name 
+description              : Joaquin Perez - Projects and CV
+baseurl: "/fa25-portfolio-joacopm5"
+url: "https://cornell-mae-ug.github.io"
 
 # Theme and Style
 theme: jekyll-theme-minimal
@@ -43,4 +44,3 @@ plugins:
   - jekyll-feed
   - jekyll-include-cache
   - jekyll-seo-tag
-
