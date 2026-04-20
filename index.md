@@ -5,14 +5,6 @@ title: Joaquin Perez
 
 ## About Me
 
-.profile-image {
-  width: 180px;        /* adjust this number */
-  height: 180px;       /* keeps it square */
-  object-fit: cover;   /* prevents distortion */
-  border-radius: 50%;  /* makes it circular */
-  display: block;
-  margin: 20px auto;   /* centers it */
-}
 
 <div class="about-container">
   <img src="{{ '/assets/images/profile-pic.JPG' | relative_url }}" alt="Profile Picture" class="profile-image">
