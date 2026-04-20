@@ -6,7 +6,7 @@ title: Joaquin Perez
 ## About Me
 
 
-<img src="{{ '/assets/images/profile-pic.jpg' | relative_url }}" alt="Profile Picture" class="profile-image">
+![Profile Picture](/assets/images/profile-pic.JPG)
 
  
 My name is Joaquin Perez, and I am passionate about blending engineering, creativity, and community impact. As a Mechanical Engineering student at Cornell University, I enjoy tackling complex challenges in design and problem-solving while also pursuing broader interests in system optimization, magnagement consulting, and sustainability. My involvement with ALPFA and Cornell Hyperloop has strengthened my leadership, teamwork, and project management skills, while my curiosity drives me to constantly expand my knowledge in areas like robotics, physics, and thermodynamics. I take pride in finding ways to merge technical knowledge with meaningful real-world outcomes.
